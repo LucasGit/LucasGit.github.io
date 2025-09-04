@@ -5,7 +5,24 @@
 </head>
 <h1> Hello! </h1>
 <body>
-    <p><a href="nsdaq_index_line_chart.html" target="_blank">>> NASDAQ</a></p><iframe src="nsdaq_index_line_chart.html" frameborder="0"></iframe>
+    <style>
+  /* 父容器样式，可根据需要调整 */
+  .iframe-container {
+    width: 80vw;   /* 视口宽度的 80% */
+    height: 50vh;  /* 视口高度的 50% */
+    margin: 0 auto; /* 水平居中 */
+  }
+  /* iframe 样式 */
+  .iframe-container iframe {
+    width: 100%;   /* 宽度 100% 填充父容器 */
+    height: 100%;  /* 高度 100% 填充父容器 */
+    border: none;  /* 可选：移除边框 */
+  }
+    </style>
+
+    <div  class="iframe-container">
+    <p><a href="nsdaq_index_line_chart.html" target="_blank">>> NASDAQ</a></p>
+    <iframe src="nsdaq_index_line_chart.html" frameborder="0"></iframe>
     <p><a href="csi_300_index_line_chart.html" target="_blank">>> CSI 300</a></p>  <iframe src="csi_300_index_line_chart.html" frameborder="0"></iframe>
 
     <!-- CN  -->
@@ -15,7 +32,7 @@
     <!-- US -->
     <p><a href="us_cpi_year_index_line_chart.html" target="_blank">>> US CPI year</a></p> <iframe src="us_cpi_year_index_line_chart.html" frameborder="0"></iframe>
     <p><a href="us_rate_index_line_chart.html" target="_blank">>> Fed Rate</a></p> <iframe src="us_rate_index_line_chart.html" frameborder="0"></iframe>
-
+    </div>
 </body>
 </html>
 
