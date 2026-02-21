@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML Files</title>
+</head>
+<body>
+<h1>HTML 文件列表</h1>
+<ul id="fileList"></ul>
+
+<script>
+fetch("https://api.github.com/repos/lucasgit/lucasgit.github.io/contents/")
+  .then(res => res.json())
+  .then(data => {
+    const list = document.getElementById("fileList");
+    data.forEach(file => {
+      if(file.name.endsWith(".html") && file.name !== "index.html") {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = file.name;
+        a.innerText = file.name;
+        li.appendChild(a);
+        list.appendChild(li);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+
