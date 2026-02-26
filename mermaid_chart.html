@@ -6,7 +6,20 @@ if (typeof mermaid !== 'undefined') {
     mermaid.initialize({ startOnLoad: true });
 }
 </script>
-
+<style>
+.code-block {
+    font-family:
+        "Sarasa Mono SC",
+        "Noto Sans Mono CJK SC",
+        "Microsoft YaHei Mono",
+        Menlo,
+        Consolas,
+        monospace;
+    white-space: pre;
+    font-size: 13px;
+}
+</style>
+  
 <div class="mermaid">
 
 flowchart TD
@@ -14,4 +27,8 @@ flowchart TD
     B --> C[Process]
     C --> D[Render Chart]
 
+</div>
+<div class="code">
+<pre class="code-block"><code>jsl_data
+</pre></code>
 </div>
